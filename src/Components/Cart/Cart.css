@@ -1,0 +1,359 @@
+.naav{
+    background-color: #333333 ;
+    display: flex;
+    height: 150px;
+    padding-top: 20px;
+    padding-left: 100px;
+    justify-content: space-between;
+ 
+    
+}
+.no-item{
+    display: grid;
+    border-top: 2px solid black;
+    place-items: center;
+}
+
+.naav-logo{
+    display: flex;
+}
+.naav-logo img{
+ height: 118px;
+}
+.naav-logo p{
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-weight: 400; 
+    font-size: 48px;
+    color: #FFFFFF;
+    font-family: 'Lobster', sans-serif;
+    line-height: 60px;
+}
+.naavbar-lists li{
+    list-style-type: none;
+    font-family: 'Work sans', sans-serif;
+    padding: 10px; 
+
+}
+.naavbar-lists li a{
+    color:#FFFFFF;
+    font-weight: 400px;
+    font-size: 16px;
+    line-height: 18.77px;
+    text-decoration: none;
+  
+}
+.naavbar-lists li a:hover{
+    color: red;
+}
+.naavbar-lists{
+    display: flex;
+    align-items: center;
+    gap:10px;
+   
+
+}
+
+.naavbar-right{
+    display: flex;
+    align-items: center;
+    margin-right: 70px;
+}
+
+.naavbar-icon{
+    display: flex;
+   text-align: center;
+   padding-top: 6px;
+   
+   justify-content: space-around;
+   
+   background-color: #999999;
+    width: 76px;
+    height: 42px;
+    border-radius: 5px;
+
+
+}
+.naavbar-icon img{
+   width: 20px;
+   height: 20px;
+
+
+  
+   
+}
+.hamburger{
+    display: none;
+}
+.cart-item{
+    position: relative;
+}
+
+.cart-title h2{
+    width: 75px;
+    height: 42px;
+    font-weight: 500;
+    font-size: 36px;
+    line-height: 42.23px;
+    padding-top: 10px;
+    padding-left: 30px;
+
+
+
+}
+.cart-img img{
+    border-radius: 0px;
+}
+.cart-body{
+    border-top: 1px solid #564E3B ;
+    padding-top: 30px;
+    display: flex;
+    flex-direction: column;
+   
+ 
+}
+.cart-counter{
+    display: flex;
+    gap:10px;
+   
+}
+
+.cart-counter button{
+    width: 3vw;
+    height: 3vw;
+}
+
+.cart-items{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap:10px
+
+}
+.cart-item{
+    display: flex;
+    background-color: white;
+    padding: 15px;
+    margin: 0 auto;
+
+}
+.cart-text{
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 23.46px;
+    padding-top: 5vw;
+    margin-left: 20px;
+    
+
+}
+
+.cart-add{
+    display: flex;
+    gap:200px;
+   
+
+
+}
+
+.remove-btn{
+    position: absolute;
+    right:1px;
+    top:5px;
+    width: 106px;
+    height: 39px;
+    padding: 10px;
+    background-color: white;
+    border-radius: 8px;
+    color: #6C0345;
+}
+.cart-price{
+    position: absolute;
+    right:10px;
+
+}
+.cart-des {
+    width: 300px;
+}
+.cart-summary{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+}
+.cart-summary h3{
+    font-size: 20px;
+    font-weight: 500;
+
+    margin-left: 5px;
+
+}
+.purple {
+    color: #6C0345;
+}
+
+.cart-btn{
+    width: 621px;
+    height: 43px;
+    border-radius: 5px;
+    background-color: #564E3B;
+    color: white;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+.cart-total{
+    display: flex;
+    justify-content: center;
+    gap: 400px;
+    
+}
+.cart-add button{
+    width: 20px;
+    height: 20px;
+    padding: 1px;
+    
+
+}
+.cart-add button p{
+   text-align: center;
+}
+.cart-total li{
+
+    list-style-type: none;
+}
+
+
+
+@media (max-width: 1000px) {
+    .naav {
+        padding-left: 30px;
+    }
+    .naav-logo p {
+        font-size: 36px;
+        line-height: 48px;
+    }
+    .cart-img img {
+        width: 30vw;
+        height: auto
+    }
+    .cart-items{
+        margin: 20px;
+        
+    }
+   
+   
+    
+    
+}
+
+@media (max-width: 768px) {
+    .naav {
+        height: auto;
+        padding: 20px;
+    }
+    .naav-logo img{
+        width: 8vw;
+        height: auto;
+    }
+    .naav-logo {
+        margin-bottom: 20px;
+    }
+   
+    .naavbar-right {
+        margin-right: 0;
+    }
+    .naavbar-icon{
+        width: 80px;
+        height: 40px;
+    }
+    .cart-counter button {
+        width: 20px;
+        height: 20px;
+        padding: 2px;
+    }
+    .cart-text {
+        font-size: 16px;
+        line-height: 20px;
+    }
+    .cart-des {
+       width: 200px;
+       text-wrap: wrap;
+    }
+   
+   .cart-counter{
+    gap:10px
+
+   }
+    .cart-btn {
+        width: 60vw;
+        text-align: center;
+        
+    }
+    .cart-total {
+        
+        gap: 170px;
+    }
+    
+   
+}
+
+@media (max-width: 650px) {
+    .naav {
+        padding-left: 10px;
+        height: 130px;
+    }
+    .group{
+        display: none;
+    }
+    .hamburger{
+        display: block;
+    }
+   
+    .naav-logo{
+        width: 5vw;
+        height: auto;
+    }
+    .naav-logo p {
+        font-size: 24px;
+        line-height: 36px;
+    }
+    .cart-title h2 {
+        font-size: 20px;
+    }
+    .cart-des{
+        width: 150px;
+        font-size: 12px;
+    }
+    .cart-text{
+        text-wrap: wrap;
+    }
+  
+    .naavbar-lists{
+        display: none;
+    }
+   
+    .cart-item{
+        width: 400px;
+        height: 180px;
+    }
+}
+
+@media (max-width: 500px) {
+   
+    .cart-total {
+        
+        gap: 100px;
+    }
+ 
+
+}
+@media (max-width: 430px) {
+    .cart-item{
+        width: 370px;
+        height: 160px;
+    }
+    .remove-btn{
+        right:0px;
+        top:0px
+    }
+ 
+}

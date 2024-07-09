@@ -1,0 +1,85 @@
+.successful {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+    background-color: white;
+    margin-top: 50px;
+    padding: 20px;
+    width: 822px; /* Default width for larger screens */
+    height: 640px;
+    color: black;
+}
+
+.successful-title h2 {
+    font-size: 2rem;
+    font-weight: 500;
+}
+
+.successful-title p {
+    text-align: center;
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 18.77px;
+}
+
+.checkmark {
+    margin: 30px;
+}
+
+.successful-lists {
+    display: flex;
+    gap: 20px;
+}
+
+.successful-lists ul li {
+    list-style-type: none;
+}
+
+.continue {
+    width: 169px;
+    height: 39px;
+    background-color: #564e3b;
+    margin-top: 30px;
+}
+
+.continue p {
+    padding: 8px;
+    text-align: center;
+    color: white;
+}
+
+.help {
+    position: absolute;
+    bottom: 0;
+    margin: 0;
+    padding: 0;
+    line-height: 10.42px;
+}
+
+.help h3,
+.help p {
+    font-weight: 400;
+    font-size: 14px;
+}
+
+/* Media Queries for Responsive Design */
+
+@media (max-width: 822px) {
+    .successful {
+        width: 90%; /* Occupy full width */
+        padding: 10px; /* Reduce padding */
+    }
+}
+
+@media (max-width: 600px) {
+   .continue{
+    width: 120%;
+   }
+   .continue p {
+    padding: 5px;
+
+}
+}
+

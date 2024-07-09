@@ -1,0 +1,254 @@
+@import url("https://fonts.googleapis.com/css?family=Lobster");
+.nav{
+    display: flex;
+  
+}
+
+
+.navbar{
+    background-image: url('bg.png');
+    background-color: #564E3B;
+    background-size:cover;
+    background-size: 100vw 100vh;
+    padding-left: 100px;
+    gap: 500px;
+ 
+   
+}
+
+.nav-logo{
+    display: flex;
+}
+.nav-logo img{
+ height: 118px;
+}
+.nav-logo p{
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-weight: 400; 
+    font-size: 48px;
+    color: #FFFFFF;
+    font-family: 'Lobster', sans-serif;
+    line-height: 60px;
+}
+.navbar-lists li{
+    list-style-type: none;
+    font-family: 'Work sans', sans-serif;
+    padding: 10px; 
+
+}
+.navbar-lists li a{
+    color:#FFFFFF;
+    font-weight: 400px;
+    font-size: 16px;
+    line-height: 18.77px;
+    text-decoration: none;
+  
+}
+.navbar-lists li a:hover{
+    color: red;
+}
+.navbar-lists{
+    display: flex;
+    gap:10px;
+    margin-right: 14px;
+
+}
+.navbar-right{
+    display: flex;
+}
+.navbar-search input{
+    border: 0px;
+    border-radius: 5px;
+
+}
+.navbar-search{
+    margin-right: 5px;
+    border-radius: 5px;
+    position: relative;
+  
+}
+
+.navbar-search img{
+    position: absolute;
+    display: inline;
+    bottom: 9px;
+    left:15px
+}
+.search-icon{
+    display: none;
+    text-align: center;
+    padding-top: 6px;
+    justify-content: space-around;
+    background-color: #999999;
+     width: 42px;
+     height: 42px;
+     border-radius: 5px;
+     border-top-right-radius: 0px;
+     border-bottom-right-radius: 0px;
+    
+
+}
+
+.navbar-search input{
+    padding-left: 40px;
+    width: 183px;
+    height: 42px;
+    background-color: #999999;
+   
+   
+}
+.navbar-search input::placeholder{
+    color: #FFFFFF;
+    font-family: 'Work Sans';
+}
+.navbar-icon{
+    display: flex;
+   text-align: center;
+   padding-top: 6px;
+   justify-content: space-around;
+   background-color: #999999;
+    width: 76px;
+    height: 42px;
+    border-radius: 5px;
+   /* border: 1px solid black;*/
+
+}
+.navbar-icon img{
+   width: 20px;
+   height: 20px;
+   
+}
+/* Media Queries for Responsive Design */
+
+@media only screen and (max-width: 1200px) {
+    .navbar {
+      padding-left: 5vw;
+    }
+  }
+  
+  @media only screen and (max-width: 992px) {
+    .navbar {
+      padding-left: 20px;
+    }
+    .navbar-lists {
+      display: none; /* Hide the navigation links */
+    }
+    .navbar-right {
+      margin-left: auto; /* Move the right-aligned elements to the right edge */
+    }
+  }
+  
+  @media only screen and (max-width: 768px) {
+ 
+    .nav-logo p {
+      font-size: 32px;
+      line-height: 40px;
+    }
+    .navbar-search input {
+      width: 150px;
+    }
+  
+    .navbar-icon {
+      width: 60px;
+    }
+    .nav-logo {
+        width: 5vw;
+        height: auto;
+    
+    
+      }
+  }
+  
+
+  
+  
+  @media only screen and (max-width: 598px) {
+    .navbar {
+      flex-direction: column;
+      height: 600px;
+      gap:250px
+    
+    }
+    .nav{
+        display:flex;
+        gap:10px;
+        margin-left: 10px;
+
+
+
+        
+    }
+    .nav-logo p{
+        font-size: 24px;
+        padding-top: 30px;
+
+    }
+ 
+    .navbar-search input {
+      width: 100%;
+    }
+    .nav-logo p{
+        font-size: 30px;
+        line-height: 28px;
+
+    }
+    .nav-logo img{
+        width: 15vw;
+        height: auto;
+    }
+    
+  }
+  @media only screen and (max-width: 576px) {
+    .navbar {
+      flex-direction: column;
+      padding: 10px;
+      padding-left: 6px;
+    }
+    .navbar-search{
+        display: none;
+    }
+    .search-icon{
+        display: block;
+    }
+  .navbar-icon{
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+  }
+    .nav-logo p{
+        font-size: 24px;
+        line-height: 28px;
+
+    }
+}
+  @media only screen and (max-width: 460px) {
+
+
+    /*.navbar-search input {
+        padding-left: 40px;
+        width: 200px;
+        height: 42px;
+    }*/
+ 
+}
+  @media only screen and (max-width: 400px) {
+    .navbar {
+        padding-left: 5px;
+    }
+    .nav-logo p {
+        font-size: 20px;
+        line-height: 28px;
+    }
+    .navbar-search input {
+        padding-left: 30px;
+        width: 170px;
+        height: 42px;
+    }
+    .navbar-icon {
+        width: 55px;
+    }
+    .navbar-search img {
+        bottom: 6px;
+        left: 8px;
+    }
+}

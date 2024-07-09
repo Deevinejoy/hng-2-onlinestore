@@ -1,0 +1,88 @@
+.home-sect{
+    color: white;
+
+}
+.home-title {
+    font-weight: 600px;
+    font-size: 24px
+    
+
+}
+.home-des{
+    font-weight: 400px;
+    font-size:16px;
+}
+.home-button{
+    display: flex;
+    gap:8px
+}
+.home-select{
+    display:none;
+   
+  
+}
+.home-select select{
+    width: 122px;
+    height: 30px;
+    background-color: #564E3B;
+    color: white;
+    margin-bottom: 20px;
+}
+button{
+    border-radius: 5px;
+    border: 0px;
+    color: #564E3B;
+}
+.home-button p{
+    font-weight: 500px;
+    line-height: 18.77px;
+    font-size: 16px;
+    text-align: center;
+    margin: 0 auto;
+    padding: 10px;
+    
+}
+button:hover{
+   background-color: #564E3B;
+   color: white;
+    
+
+}
+@media only screen and (max-width: 768px) {
+    .home-title {
+        font-size: 24px;
+        font-weight: 600;
+        line-height: 23.46px;
+    }
+    .home-des {
+        font-size: 14px;
+        font-weight: 400px;
+        line-height: 14.08px;
+    }
+    .home-button {
+        display: none;
+    }
+    .home-select{
+        display: block;
+    }
+}
+
+@media only screen and (max-width: 576px) {
+    .home-title {
+        font-size: 20px;
+        font-weight: 600;
+        line-height: 23.46px;
+    }
+    .home-des {
+        font-size: 12px;
+        font-weight: 400px;
+        line-height: 14.08px;
+    }
+    .home-button {
+        gap: 5px;
+    }
+    button {
+        padding: 6px 12px;
+        font-size: 14px;
+    }
+}

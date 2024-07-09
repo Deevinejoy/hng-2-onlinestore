@@ -1,0 +1,98 @@
+
+@import url("https://fonts.googleapis.com/css?family=Lobster");
+
+.footer-sect{
+    background-image: url('footer.png');
+    background-size:cover;
+    background-repeat: no-repeat;
+    background-size: 100vw 60vh;
+    color: #ffffff;
+   
+}
+
+
+.contact{
+    display: flex;
+    justify-content: space-between;
+    padding-left: 50px;
+    padding-right: 50px;
+
+}
+
+.contact-logo{
+    display: flex;
+    flex-direction: row;
+    padding: 50px;
+    
+}
+.contact-logo img{
+    height: 118px;
+    width: 90px;
+   
+}
+.contact-logo h2{
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-weight: 400; 
+    font-size: 48px;
+    color: #FFFFFF;
+    font-family: 'Lobster', sans-serif;
+    line-height: 60px;
+}
+.contact ul li{
+    font-weight: 500;
+    font-size: 16px;
+    list-style-type: none;
+
+}
+.copyright{
+  display: flex;
+  justify-content: space-between;
+  padding-left: 50px;
+    padding-right: 50px;
+}
+.copyright p{
+    margin-bottom: 0px;
+   
+}
+@media only screen and (max-width: 1000px) {
+   .contact{
+    flex-wrap: wrap;
+   }
+    
+    .contact-three{
+        order: 3;
+        text-align: center;
+        justify-self:  center;
+       
+    }
+    .copyright p{
+        font-size: 12px;
+        padding-left: 10px;
+    padding-right: 10px;
+    }
+    
+    
+}
+@media only screen and (max-width: 500px) {
+    .contact{
+        padding-left: 5px;
+        padding-right: 5px;
+    
+    }
+    
+    .contact-logo{
+        display: flex;
+        flex-direction: row;
+        padding: 10px;
+        
+    }
+    .copyright p{
+        font-size: 12px;
+        padding-left: 3px;
+    padding-right: 3px;
+    }
+    
+    
+    
+}

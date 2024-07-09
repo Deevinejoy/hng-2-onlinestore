@@ -1,12 +1,12 @@
 import { useState } from 'react'
 import './App.css'
 
-import { BrowserRouter, Routes,  Route} from 'react-router-dom'
+import { Routes,  Route} from 'react-router-dom'
 import Cart from './Components/Cart/Cart'
 import Home from './Home'
 import Checkout from './Components/Checkout/Checkout'
 import Successful from './Components/Successful/Successful'
-import data from './data'
+
 
 function App() {
   const [cartItems, setCartItems] = useState([]);

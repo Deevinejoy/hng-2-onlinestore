@@ -7,7 +7,7 @@
     background-color: white;
     margin-top: 50px;
     padding: 20px;
-    width: 822px; /* Default width for larger screens */
+    width: 822px; 
     height: 640px;
     color: black;
 }
@@ -55,22 +55,27 @@
     bottom: 0;
     margin: 0;
     padding: 0;
-    line-height: 10.42px;
+    
 }
 
 .help h3,
 .help p {
     font-weight: 400;
     font-size: 14px;
+    line-height: 14.08px;
+}
+.support {
+    margin: 1.5px;
 }
 
-/* Media Queries for Responsive Design */
+
 
 @media (max-width: 822px) {
     .successful {
-        width: 90%; /* Occupy full width */
-        padding: 10px; /* Reduce padding */
+        width: 90%; 
+        padding: 10px; 
     }
+    
 }
 
 @media (max-width: 600px) {

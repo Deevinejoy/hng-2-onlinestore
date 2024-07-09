@@ -20,7 +20,7 @@ const About = () => {
           
       
         <input type='text' placeholder='Email address'/>
-        <button>Subscribe</button>
+        <button className='about-btn'>Subscribe</button>
        
 
         </form>

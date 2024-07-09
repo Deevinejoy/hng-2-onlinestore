@@ -5,8 +5,6 @@
 .home-title {
     font-weight: 600px;
     font-size: 24px
-    
-
 }
 .home-des{
     font-weight: 400px;
@@ -18,8 +16,6 @@
 }
 .home-select{
     display:none;
-   
-  
 }
 .home-select select{
     width: 122px;
@@ -33,6 +29,16 @@ button{
     border: 0px;
     color: #564E3B;
 }
+button:hover{
+    background-color: #6C0345;
+    color: white;
+}
+.first-button p{
+    border-radius: 5px;
+    border: 0px;
+    background-color:  #6C0345;
+    color: white;
+}
 .home-button p{
     font-weight: 500px;
     line-height: 18.77px;
@@ -42,12 +48,7 @@ button{
     padding: 10px;
     
 }
-button:hover{
-   background-color: #564E3B;
-   color: white;
-    
 
-}
 @media only screen and (max-width: 768px) {
     .home-title {
         font-size: 24px;

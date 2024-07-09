@@ -59,7 +59,11 @@
     align-items: center;
     margin-right: 70px;
 }
-
+.naavbar-icon img:hover{
+  padding: 2px;
+   background-color: #6C0345;
+  
+  }
 .naavbar-icon{
     display: flex;
    text-align: center;

@@ -6,14 +6,12 @@
 
 
 .navbar{
-    background-image: url('bg.png');
+    background-image: url('/bg.png');
     background-color: #564E3B;
     background-size:cover;
     background-size: 100vw 100vh;
     padding-left: 100px;
     gap: 500px;
- 
-   
 }
 
 .nav-logo{
@@ -45,8 +43,13 @@
     text-decoration: none;
   
 }
+.navbar-icon img:hover{
+  padding: 2.5px;
+ background-color: #6C0345;
+
+}
 .navbar-lists li a:hover{
-    color: red;
+  color: #6C0345
 }
 .navbar-lists{
     display: flex;
@@ -111,7 +114,7 @@
     width: 76px;
     height: 42px;
     border-radius: 5px;
-   /* border: 1px solid black;*/
+ 
 
 }
 .navbar-icon img{
@@ -119,7 +122,7 @@
    height: 20px;
    
 }
-/* Media Queries for Responsive Design */
+
 
 @media only screen and (max-width: 1200px) {
     .navbar {
@@ -132,10 +135,10 @@
       padding-left: 20px;
     }
     .navbar-lists {
-      display: none; /* Hide the navigation links */
+      display: none; 
     }
     .navbar-right {
-      margin-left: auto; /* Move the right-aligned elements to the right edge */
+      margin-left: auto; 
     }
   }
   
@@ -210,6 +213,7 @@
     }
     .search-icon{
         display: block;
+        width: 30px;
     }
   .navbar-icon{
     border-top-left-radius: 0px;
@@ -221,16 +225,7 @@
 
     }
 }
-  @media only screen and (max-width: 460px) {
 
-
-    /*.navbar-search input {
-        padding-left: 40px;
-        width: 200px;
-        height: 42px;
-    }*/
- 
-}
   @media only screen and (max-width: 400px) {
     .navbar {
         padding-left: 5px;

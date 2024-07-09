@@ -5,22 +5,9 @@ import { Link } from 'react-router-dom'
 
 
 const Cart = ({cartItems, handleRemove, updateQty}) => {
-  const [count, setCount] = useState(1)
 
- // const handleCount =(id, count)=>{
- //  let update = cartItems.map((item) => id === item.id ? item.price == item.price * count: item)
-   
- //  setCartItems(update)
-  // console.log(update) }
- // const [selectedQuantity, setSelectedQuantity] = useState(1);
  const totalPrice = cartItems.reduce((price, item)=>  parseInt(price + item.quantity * item.price), 0)
 
-
-  
-  //  const handleQuantityChange = (event) => {
-     // setSelectedQuantity(parseInt(event.target.value));
-  // };
- 
   
   return (
     <>
@@ -105,7 +92,7 @@ const Cart = ({cartItems, handleRemove, updateQty}) => {
           <li>5% off</li>
           <li>₦3000</li>
           <li>₦0</li>
-          <li>₦{totalPrice *0.95 + 3000  }</li>
+          <li>₦{parseInt(totalPrice *0.95 + 3000 ) }</li>
           </ul>
           
         </div>

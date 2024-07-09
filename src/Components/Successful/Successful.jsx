@@ -69,7 +69,7 @@ const Successful = () => {
         </Link>
         <div className='help'>
             <h3>Need Help?</h3>
-            <p>If you have any questions about your order, please contact our customer support team at:</p>
+            <p className='support'>If you have any questions about your order, please contact our customer support team at:</p>
             <p>(808) 555-0111 craft@services.net</p>
       </div>
        

@@ -82,6 +82,7 @@
 
 .payment-button p {
     text-align: center;
+    margin: 0 auto;
 }
 
 .payment-method {
@@ -98,10 +99,11 @@
 .first{
     background-color: #564E3B;
     color: white;
-    padding: 5px;
+    
     height: 50px;
     border-radius: 3px;
 }
+
 
 .last{
     background-color: white;

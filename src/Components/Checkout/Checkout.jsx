@@ -358,13 +358,13 @@ const Checkout = () => {
       <h2>Payment method</h2>
       <div className='payment-method'>
         <button className='first'>
-          <p>Credit card <img src='creditcard.png' alt='icon'/></p>
+          <p>Credit card <img src='creditcard.svg' alt='icon'/></p>
         </button>
         <button className='second'>
-          <p>PayPal <img src='paypal.png' alt='icon'/></p>
+          <p>PayPal <img src='paypal.svg' alt='icon'/></p>
         </button>
         <button className='last'>
-          <p>Bank transfer </p><img src='transfer.png' alt='icon'/>
+          <p>Bank transfer </p><img src='transfer.svg' alt='icon'/>
         </button>
 
       </div>

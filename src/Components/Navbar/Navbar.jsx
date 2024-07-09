@@ -24,16 +24,16 @@ const Navbar = () => {
         
         <div className='navbar-right'>
         <div className='search-icon'>
-            <img src='search.png'/>
+            <img src='search.svg'/>
             </div>
           <form className='navbar-search'>
            
-            <img src='search.png'/>
+            <img src='search.svg'/>
             <input type='text' placeholder='search'/>
           </form>
           <div className='navbar-icon'>
-            <Link to='./cart' ><img src='cart.png' alt='cart' /></Link>
-            <p><img src='Group.png' alt='cart'/></p>
+            <Link to='./cart' ><img src='cart.svg' alt='cart' /></Link>
+            <p><img src='user.svg' alt='cart'/></p>
           </div>
         </div>
       

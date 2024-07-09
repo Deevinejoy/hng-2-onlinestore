@@ -30,9 +30,9 @@ const Cart = ({cartItems, handleRemove, updateQty}) => {
          
           <div className='naavbar-icon'>
            
-          <div  ><img src='cart.png' alt='cart' /></div>
-          <Link to='/' className='hamburger'><img src='hamburger.png'/></Link>
-            <div className='group'><img src='Group.png' alt='cart'/></div>
+          <div><img src='cart.svg' alt='cart' /></div>
+          <Link to='/' className='hamburger'><img src='hamburger.svg'/></Link>
+            <div className='group'><img src='user.svg' alt='cart'/></div>
           </div>
         
 

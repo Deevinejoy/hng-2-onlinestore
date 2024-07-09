@@ -24,9 +24,9 @@ const Successful = () => {
          
           <div className='naavbar-icon'>
            
-          <Link to='/cart'><img src='cart.png' alt='cart' /></Link>
-          <Link to='/' className='hamburger'><img src='hamburger.png'/></Link>
-            <div className='group'><img src='Group.png' alt='cart'/></div>
+          <Link to='/cart'><img src='cart.svg' alt='cart' /></Link>
+          <Link to='/' className='hamburger'><img src='hamburger.svg'/></Link>
+            <div className='group'><img src='user.png' alt='cart'/></div>
           </div>
         
 

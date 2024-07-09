@@ -226,7 +226,10 @@
     }
     .first {
         
-        font-size: 65%;
+        font-size: 66%;
+    }
+    .last{
+        font-size:70%;
     }
 }
 

@@ -63,11 +63,11 @@ const Cart = ({cartItems, handleRemove, updateQty}) => {
                   <button onClick={()=> updateQty(product.id, true)}>+
                   </button>
                   <p >{product.quantity}</p>
-                  <button onClick={()=> updateQty(product.id, false)}>-
+                  <button className='minus' onClick={()=> updateQty(product.id, false)}>-
                   </button>
                   </div >
                   
-                    <p className='cart-price purple'>₦{product.price * product.quantity}</p>
+                    <p className='cart-price purple'>₦{(product.price * product.quantity).toLocaleString()}</p>
                 </div>
 
               </div>
@@ -88,11 +88,11 @@ const Cart = ({cartItems, handleRemove, updateQty}) => {
           <li>Tax:</li>
           <li>Total:</li>
           </ul>
-          <ul className='purple'><li>₦{totalPrice}</li>
+          <ul className='purple'><li>₦{totalPrice.toLocaleString()}</li>
           <li>5% off</li>
           <li>₦3000</li>
           <li>₦0</li>
-          <li>₦{parseInt(totalPrice *0.95 + 3000 ) }</li>
+          <li>₦{parseInt(totalPrice *0.95 + 3000 ).toLocaleString() }</li>
           </ul>
           
         </div>

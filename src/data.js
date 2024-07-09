@@ -97,7 +97,7 @@
             id: 15,
             image: 'furniture16.png',
             des: 'A sleek and functional desk, perfect for any home office or study area.',
-            price:'450,999',
+            price:'450999',
         },
         {
             id: 16,

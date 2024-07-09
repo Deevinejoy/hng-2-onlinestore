@@ -3,7 +3,7 @@ import "./Products.css"
 
 
 
-const Products = ({data, addToCart, text, setText}) => {
+const Products = ({data, addToCart, text}) => {
    
   return (
     <div id='products' className='products-sect'>
@@ -18,7 +18,7 @@ const Products = ({data, addToCart, text, setText}) => {
                 <p className='product-des'>{product.des}</p>
                 <div className='product-price-n-cart'>
                     <button onClick={()=> addToCart(product)}><p>{text}</p></button>
-                    <p className='price'>₦{product.price}</p>
+                    <p className='price'>₦{Number((product.price)).toLocaleString()}</p>
 
                 </div>
             

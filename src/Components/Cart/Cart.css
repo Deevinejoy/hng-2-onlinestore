@@ -81,9 +81,6 @@
 .naavbar-icon img{
    width: 20px;
    height: 20px;
-
-
-  
    
 }
 .hamburger{
@@ -122,10 +119,13 @@
    
 }
 
+
 .cart-counter button{
     width: 3vw;
     height: 3vw;
+    
 }
+
 
 .cart-items{
     display: flex;
@@ -284,8 +284,12 @@
     }
    
    .cart-counter{
-    gap:10px
+    gap:10px;
+    
 
+   }
+   .minus p{
+   margin: 10px;
    }
     .cart-btn {
         width: 60vw;

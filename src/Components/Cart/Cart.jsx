@@ -90,7 +90,7 @@ const Cart = ({cartItems, handleRemove, updateQty}) => {
           </ul>
           <ul className='purple'><li>₦{totalPrice.toLocaleString()}</li>
           <li>5% off</li>
-          <li>₦3000</li>
+          <li>₦3,000</li>
           <li>₦0</li>
           <li>₦{parseInt(totalPrice *0.95 + 3000 ).toLocaleString() }</li>
           </ul>

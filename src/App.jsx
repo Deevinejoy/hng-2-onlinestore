@@ -30,9 +30,7 @@ function App() {
     setCartItems((prevCart) =>
       prevCart.reduce((acc, item) => {
         if (item.id === product) {
-          if (item.quantity > 1) {
-            acc.push({ ...item, quantity: item.quantity - 1 });
-          }
+         item.id !== product
         } else {
           acc.push(item);
         

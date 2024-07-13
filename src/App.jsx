@@ -16,7 +16,6 @@ function App() {
   const {isAdded, setIsAdded} = useState(false)
   const [currentPage, setCurrentPage] = useState(1)
   const [productPerPage, setProductPerPage] = useState(10)
-  
   const lastProductIndex = currentPage * productPerPage;
   const firstProductIndex = lastProductIndex - productPerPage
 
@@ -39,24 +38,19 @@ function App() {
   },[products])
 
 
-
- 
-
-
    
-     const addToCart = (product) => {
-      
-      setCartItems((prevCart) => {
-       
-        const itemInCart = prevCart.find((item) => item.id === product.id);
-        if (itemInCart) {
-          return prevCart.map((item) =>
-            item.id === product.id ? { ...item, quantity: item.quantity + 1 } : item
-          );
-        }
-        return [...prevCart, { ...product, quantity: 1 }];
-      });
-    };
+  const addToCart = (product) => {
+  setCartItems((prevCart) => {
+    
+    const itemInCart = prevCart.find((item) => item.id === product.id);
+    if (itemInCart) {
+      return prevCart.map((item) =>
+        item.id === product.id ? { ...item, quantity: item.quantity + 1 } : item
+      );
+    }
+    return [...prevCart, { ...product, quantity: 1 }];
+  });
+  };
     
   
   const handleRemove = (product)=>{
@@ -82,7 +76,6 @@ function App() {
         if (item.id === id) {
           const newQuantity = count ? item.quantity + 1 : item.quantity - 1;
           if (newQuantity > 0) {
-            console.log(newQuantity)
             acc.push({ ...item, quantity: newQuantity });
           }
         } else {

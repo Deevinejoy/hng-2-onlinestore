@@ -27,7 +27,7 @@ const Products = ({products}) => {
                 <p className='product-des'>{product.name}</p>
                 <div className='product-price-n-cart'>
                    
-                    <p className='price'>₦{product.current_price[0]?.NGN[0]}</p>
+                    <p className='price'>₦{(product.current_price[0]?.NGN[0]).toLocaleString()}</p>
 
                 </div>
               </Link>

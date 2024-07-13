@@ -51,14 +51,12 @@ const ProductPage = ({ addToCart, products, setIsAdded, isAdded}) => {
        
        
         <div className='product-listings'>
-        <p className='product-listing-des'>{product.description}</p>
+           <p className='product-listing-des'>{product.description}</p>
            <div className='product-listing'>
-           <p className='product-price'>₦{(product.current_price[0]?.NGN[0].toLocaleString())}</p>
-           <button onClick={()=> addToCart (product)}>
-            { isAdded===true ? <p>Added</p>: <p>Add to cart</p> }
-            
+            <p className='product-price'>₦{(product.current_price[0]?.NGN[0].toLocaleString())}</p>
+            <button onClick={()=> addToCart (product)}>
+                { isAdded===true ? <p>Added</p>: <p>Add to cart</p> }
             </button>
-           
            </div>
           
            

@@ -60,7 +60,7 @@ const Cart = ({cartItems, handleRemove, updateQty}) => {
               </div>
 
               <div className='cart-text'>
-                <p className='cart-des'>{product.des}</p>
+                <p className='cart-des'>{product.description}</p>
                 <div className='cart-add'>
                   <div className='cart-counter'>
                   <button onClick={()=> updateQty(product.id, true)}>+
@@ -86,17 +86,18 @@ const Cart = ({cartItems, handleRemove, updateQty}) => {
       <div className='cart-summary'>
         <h3>Order Summary</h3>
         <div className='cart-total'>
-          <ul><li>Sub total:</li>
+          <ul>
+          <li>Sub total:</li>
           <li>Discount:</li>
           <li>Shipping Fee:</li>
           <li>Tax:</li>
-          <li>Total:</li>
+          <li className='bold'>Total:</li>
           </ul>
           <ul className='purple'><li>₦{totalPrice.toLocaleString()}</li>
           <li>5% off</li>
           <li>₦3,000</li>
           <li>₦0</li>
-          <li>₦{parseInt(totalPrice *0.95 + 3000 ).toLocaleString() }</li>
+          <li className='bold'>₦{parseInt(totalPrice *0.95 + 3000 ).toLocaleString() }</li>
           </ul>
           
         </div>

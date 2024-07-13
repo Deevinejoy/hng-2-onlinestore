@@ -45,7 +45,7 @@
   
 }
 .naavbar-lists li a:hover{
-    color: red;
+    border: 2px solid #6C0345;
 }
 .naavbar-lists{
     display: flex;
@@ -61,8 +61,7 @@
     margin-right: 70px;
 }
 .naavbar-icon img:hover{
-  padding: 2px;
-   background-color: #6C0345;
+    border: 2px solid black;
   
   }
 .naavbar-icon{
@@ -194,6 +193,9 @@
 }
 .purple {
     color: #6C0345;
+}
+.bold{
+    font-weight: 800;
 }
 
 .cart-btn{

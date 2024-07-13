@@ -18,7 +18,7 @@
 }
 .product-name{
     font-size: 1.5rem;
-    padding: 5px;
+    padding: 10px;
 }
 
 .product-listings {
@@ -84,7 +84,7 @@
         padding: 30px;
     }
     .product-listing {
-        gap: 30px;
+        gap: 40px;
     }
     .product-img img{
         width:40vw;
@@ -113,7 +113,7 @@
     }
     .product-listings {
         margin-top: 20px;
-        gap:20px
+        gap:30px
     }
   
     
@@ -132,14 +132,15 @@
 @media (max-width: 560px) {
     .product-page {
         gap:10px;
-        height: 20vh;
+        height: 23vh;
     }
     .product-listing {
       
         gap: 10px;
     }
     .product-listings{
-        margin-top: 10px;
+        margin-top: 8px;
+        gap:30px;
     }
     .product-listing button {
         width: 80px;

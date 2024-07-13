@@ -70,7 +70,7 @@ const Cart = ({cartItems, handleRemove, updateQty}) => {
                   </button>
                   </div >
                   
-                    <p className='cart-price purple'>₦{Number(product.current_price[0].NGN[0]) * product.quantity}
+                    <p className='cart-price purple'>₦{(Number(product.current_price[0].NGN[0]) * product.quantity).toLocaleString()}
                     </p>
                 </div>
 

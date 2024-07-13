@@ -135,12 +135,13 @@
         height: 23vh;
     }
     .product-listing {
+     
       
         gap: 10px;
     }
     .product-listings{
-        margin-top: 8px;
-        gap:30px;
+        margin-top: 5px;
+        gap:45px;
     }
     .product-listing button {
         width: 80px;

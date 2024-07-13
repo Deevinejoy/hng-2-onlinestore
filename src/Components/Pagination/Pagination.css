@@ -1,0 +1,36 @@
+.pagination-lists li{
+    list-style-type: none;
+
+
+}
+.pagination{
+    display: grid;
+    place-content: center;
+    margin-top: 40px;
+
+}
+.pagination ul{
+    display: flex;
+    padding: 2px;
+    gap:2px;
+    align-items: center;
+
+}
+.box{
+    height:30px;
+    width: 30px;
+    margin: 5px;
+    color: #564e56;
+    background-color: white;
+    text-align: center;
+    border: 1px solid black;
+    
+}
+.box:hover{
+    background-color: #564e56;
+    color: white;
+}
+.active{
+    background-color: black;
+    color: white;
+}

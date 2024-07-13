@@ -17,7 +17,7 @@ const Home = () => {
                       
         </select>
      </div>
-     <div className='home-button btn'>
+     <div className='home-button'>
       <button className='first-button'><p>All Furniture</p></button>
       <button><p>Living room Furniture</p></button>
       <button><p>Dining room Furniture</p></button>

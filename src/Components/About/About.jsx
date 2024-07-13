@@ -17,12 +17,8 @@ const About = () => {
         </section>
         <p className='about-form-text'>Discover the latest in Home Furnishings</p>
         <form className='about-form'>
-          
-      
-        <input type='text' placeholder='Email address'/>
-        <button className='about-btn'>Subscribe</button>
-       
-
+          <input type='text' placeholder='Email address'/>
+          <button className='about-btn'>Subscribe</button>
         </form>
     
       

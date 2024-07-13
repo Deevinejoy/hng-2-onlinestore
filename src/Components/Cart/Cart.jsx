@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom'
 
 const Cart = ({cartItems, handleRemove, updateQty}) => {
 
- const totalPrice = cartItems.reduce((price, item)=>  parseInt(price + item.quantity * item.price), 0)
+ const totalPrice = cartItems.reduce((price, item)=>  parseInt(price + item.quantity * (item.current_price[0].NGN[0])), 0)
 
   
   return (
@@ -46,14 +46,17 @@ const Cart = ({cartItems, handleRemove, updateQty}) => {
         <h2>Cart</h2>
       </header>
       {cartItems.length === 0 ? 
-      <div className='no-item'>No item in your cart</div> :
+      <div className='no-item'>
+        No item in your cart
+        </div>
+     :
         
       <div className='cart-body'>
       <div className='cart-items'> 
         {cartItems.map((product)=>
           <div key={product.id} className='cart-item'>
              <div className='cart-img'>
-                <img src={product.image} alt="" />
+                <img src={`https://api.timbu.cloud/images/${product.photos[0]?.url}`}  alt="" />
               </div>
 
               <div className='cart-text'>
@@ -67,7 +70,8 @@ const Cart = ({cartItems, handleRemove, updateQty}) => {
                   </button>
                   </div >
                   
-                    <p className='cart-price purple'>₦{(product.price * product.quantity).toLocaleString()}</p>
+                    <p className='cart-price purple'>₦{Number(product.current_price[0].NGN[0]) * product.quantity}
+                    </p>
                 </div>
 
               </div>

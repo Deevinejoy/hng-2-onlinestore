@@ -12,11 +12,18 @@
     background-color: #FFFFFF;
     border-radius: 8px;
     width:400px;
-    height: 380px;
+    height: 320px;
     padding-top: 17px;
     padding-left: 25px;
 }
 
+.product a{
+    text-decoration: none;
+}
+.product:hover{
+    border: 1.5px solid black
+
+}
 .products-sect{
     height: 100%;
 }
@@ -38,7 +45,8 @@
    gap:120px
 
 }
-.product-des{
+.product-des {
+    color: black;
     text-align: center;
     font-weight: 400;
     font-size: 16px;
@@ -46,24 +54,7 @@
     padding: 10px;
     height: 38px;
 }
-.product button{
-    background-color: #564E3B;
-    color: white;
-    
-    height: 50px;
-    width:111px;
-    border-radius: 5px;
 
-}
-.product button:hover{
-    background-color: #6C0345;
-}
-.product button p{
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 18.77px;
-    margin: 0 auto;
-}
 .price{
     font-weight: 500;
     font-size: 24px;

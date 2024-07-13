@@ -5,15 +5,21 @@ import Products from './Components/Products/Products'
 import About from './Components/About/About'
 import data from './data'
 import { BrowserRouter, Routes,  Route} from 'react-router-dom'
+import Pagination from './Components/Pagination/Pagination'
 
-const Home = ({cartItems, setCartItems, addToCart, text, setText}) => {
+
+
+const Home = ({ currentPage, setCurrentPage, products, setProducts}) => {
     
    
   return (
     <div>
         <Navbar/>
-        <Products  data={data} cartItems={cartItems} setCartItems={setCartItems} addToCart={addToCart} text={text} setText={setText} />
+        <Products products={products} setProducts={setProducts} />
+        <Pagination currentPage={currentPage} setCurrentPage={setCurrentPage}/>
         <About/>
+      
+     
         <Footer/>
         
 

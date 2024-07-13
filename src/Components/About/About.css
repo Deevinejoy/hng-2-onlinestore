@@ -13,20 +13,20 @@
 }
 .about-text{
     width: 584px;
+    padding-top: 20px;
     height: 119px;
     font-weight: 400;
-   
     size:16px;
     line-height: 24.77px;
+    margin-bottom: 60px;
 }
-.about-text p{
-  
-}
+
 .about-heading{
     text-align: center;
     font-size: 32px;
     line-height: 37.54px;
     font-weight: 600;
+ 
 }
 .about-form{
     display: flex;

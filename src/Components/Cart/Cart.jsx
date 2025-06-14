@@ -1,16 +1,15 @@
-import React from 'react'
-import './Cart.css'
-import { useState } from 'react'
 import { Link } from 'react-router-dom'
+import "./Cart.css"
+import PropTypes from 'prop-types'
 
+const Cart = ({ cartItems, handleRemove, updateQty }) => {
+  const total = cartItems?.reduce((total, item) => {
+    return total + (item?.price || 0) * (item?.quantity || 0);
+  }, 0) || 0;
 
-const Cart = ({cartItems, handleRemove, updateQty}) => {
-
- const totalPrice = cartItems.reduce((price, item)=>  parseInt(price + item.quantity * (item.current_price[0].NGN[0])), 0)
-
-  
-  return (
-    <>
+  if (!cartItems || cartItems.length === 0) {
+    return (
+      <>
     
       <nav className='container-fluid naav'>
         <div  className='naav-logo'>
@@ -18,7 +17,6 @@ const Cart = ({cartItems, handleRemove, updateQty}) => {
           <p>Craft</p>
 
         </div>
-
         <ul className='naavbar-lists'>
         <li><a href='/'>Home</a></li>
           <li><a href='./#footer'>Contact Us</a></li>
@@ -42,49 +40,92 @@ const Cart = ({cartItems, handleRemove, updateQty}) => {
       </nav>
     
       
-      <header className='cart-title'>
-        <h2>Cart</h2>
-      </header>
-      {cartItems.length === 0 ? 
-      <div className='no-item'>
-        No item in your cart
-        </div>
-     :
-        
-      <div className='cart-body'>
-      <div className='cart-items'> 
-        {cartItems.map((product)=>
-          <div key={product.id} className='cart-item'>
-             <div className='cart-img'>
-                <img src={`https://api.timbu.cloud/images/${product.photos[0]?.url}`}  alt="" />
-              </div>
+    
 
-              <div className='cart-text'>
-                <p className='cart-des'>{product.description}</p>
-                <div className='cart-add'>
-                  <div className='cart-counter'>
-                  <button onClick={()=> updateQty(product.id, true)}>+
-                  </button>
-                  <p >{product.quantity}</p>
-                  <button className='minus' onClick={()=> updateQty(product.id, false)}>-
-                  </button>
-                  </div >
-                  
-                    <p className='cart-price purple'>₦{(Number(product.current_price[0].NGN[0]) * product.quantity).toLocaleString()}
-                    </p>
-                </div>
-
-              </div>
-         
-                <button className='remove-btn' onClick={()=> handleRemove(product.id)}><p>Remove</p></button>
-             
-          </div>
-        )}
-       
+      <div className="empty-cart">
+        <h2>Your cart is empty</h2>
+        <Link to="/" className="continue-shopping">
+          Continue Shopping
+        </Link>
       </div>
+      </>
+    );
+  }
 
-      <div className='cart-summary'>
-        <h3>Order Summary</h3>
+  return (
+    <>
+
+       <nav className='container-fluid naav'>
+        <div  className='naav-logo'>
+          <img src='logo.png' alt='logo'/>
+          <p>Craft</p>
+
+        </div>
+        <ul className='naavbar-lists'>
+        <li><a href='/'>Home</a></li>
+          <li><a href='./#footer'>Contact Us</a></li>
+          <li><a href='./#products'>Shop</a></li>
+          <li><a href='./#footer'>About</a></li>
+        </ul>
+        
+        <div className='naavbar-right'>
+         
+          <div className='naavbar-icon'>
+           
+          <div><img src='cart.svg' alt='cart' /></div>
+          <Link to='/' className='hamburger'><img src='hamburger.svg'/></Link>
+            <div className='group'><img src='user.svg' alt='cart'/></div>
+          </div>
+        
+
+        </div>
+      
+
+      </nav>
+    
+      
+      
+      <div className="cart-container">
+      <h2>Shopping Cart</h2>
+      <div className="cart-items">
+        {cartItems.map((item) => (
+          <div key={item?.id} className="cart-item">
+            <div className="item-image">
+              <img 
+                src={item?.images?.[0] || 'placeholder-image.jpg'} 
+                alt={item?.title || 'Product'} 
+              />
+            </div>
+            <div className="item-details">
+              <h3>{item?.title || 'Product'}</h3>
+              <p className="price">${item?.price || 0}</p>
+              <div className="quantity-controls">
+                <button 
+                  onClick={() => updateQty(item?.id, false)}
+                  className="quantity-btn"
+                >
+                  -
+                </button>
+                <span className="quantity">{item?.quantity || 0}</span>
+                <button 
+                  onClick={() => updateQty(item?.id, true)}
+                  className="quantity-btn"
+                >
+                  +
+                </button>
+              </div>
+            </div>
+            <button 
+              onClick={() => handleRemove(item?.id)}
+              className="remove-btn"
+            >
+              Remove
+            </button>
+          </div>
+        ))}
+      </div>
+      <div className="cart-summary">
+      <h3>Order Summary</h3>
         <div className='cart-total'>
           <ul>
           <li>Sub total:</li>
@@ -93,30 +134,37 @@ const Cart = ({cartItems, handleRemove, updateQty}) => {
           <li>Tax:</li>
           <li className='bold'>Total:</li>
           </ul>
-          <ul className='purple'><li>₦{totalPrice.toLocaleString()}</li>
+          <ul className='purple'><li>${total.toFixed(2)}</li>
           <li>5% off</li>
           <li>₦3,000</li>
           <li>₦0</li>
-          <li className='bold'>₦{parseInt(totalPrice *0.95 + 3000 ).toLocaleString() }</li>
+          <li className='bold'>${total.toFixed(2) *0.95 + 3000 }</li>
           </ul>
-          
-        </div>
-        
        
-        <Link to='/checkout'>
-        <button className='cart-btn'><p>Proceed to checkout</p></button></Link>
-       
-      </div>
-    
-    </div>
-
-      }
-
-
       
+      </div>
+      <Link to="/checkout" className="checkout-btn">
+          Proceed to Checkout
+        </Link>
+      </div>
+      </div>
     </>
-  
-  )
-}
+   
+  );
+};
+
+Cart.propTypes = {
+  cartItems: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.number,
+      title: PropTypes.string,
+      price: PropTypes.number,
+      quantity: PropTypes.number,
+      images: PropTypes.arrayOf(PropTypes.string)
+    })
+  ).isRequired,
+  handleRemove: PropTypes.func.isRequired,
+  updateQty: PropTypes.func.isRequired
+};
 
 export default Cart

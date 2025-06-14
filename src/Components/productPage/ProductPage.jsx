@@ -7,7 +7,7 @@ import "./ProductPage.css"
 const ProductPage = ({ addToCart, products, setIsAdded, isAdded}) => {
    
     const { id } = useParams();
-    const product = products.find(product=> (product.unique_id) === id);
+    const product = products.find(product=> (product.id) === parseInt(id));
  
   return (
     <div>
@@ -45,15 +45,15 @@ const ProductPage = ({ addToCart, products, setIsAdded, isAdded}) => {
         {product &&
         <section className='product-page'>
         <div className='product-img'>
-            <img src={`https://api.timbu.cloud/images/${product.photos[0]?.url}`} />
-            <p className='product-name'>{product.name}</p>
+            <img src={product.images[0]} alt={product.title} />
+            <p className='product-name'>{product.title}</p>
         </div>
        
        
         <div className='product-listings'>
            <p className='product-listing-des'>{product.description}</p>
            <div className='product-listing'>
-            <p className='product-price'>₦{(product.current_price[0]?.NGN[0].toLocaleString())}</p>
+            <p className='product-price'>${product.price}</p>
             <button onClick={()=> addToCart (product)}>
                 { isAdded===true ? <p>Added</p>: <p>Add to cart</p> }
             </button>
